@@ -10,8 +10,7 @@ function checkPassword() {
   }
 }
 
-const API_URL = "https://script.google.com/macros/s/AKfycbzZEierdUqsMhBco7jxx-_iRFWyxa9C5Mk_i8FR3e1KKkPr6cm8_aJfPPOHCdXYDAMt4Q/exec";
-
+const API_URL = "https://script.google.com/macros/s/AKfycbzyz56ILigPuBmz70OEYDeD7NJFwaD-t8-ixi8wzx5tqGXKyEIYN9ABUD661YAOljLTag/exec"
 function post() {
   const name = document.getElementById("name").value;
   const message = document.getElementById("message").value;
