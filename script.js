@@ -1,5 +1,5 @@
 function checkPassword() {
-  const correct = "shogibuura";   // 正解のパスワード
+  const correct = "shogibuura";
   const input = document.getElementById("password").value;
 
   if (input === correct) {
@@ -10,7 +10,8 @@ function checkPassword() {
   }
 }
 
-const API_URL = "https://script.google.com/macros/s/AKfycbzZEierdUqsMhBco7jxx-_iRFWyxa9C5Mk_i8FR3e1KKkPr6cm8_aJfPPOHCdXYDAMt4Q/exec"
+const API_URL = "https://script.google.com/macros/s/AKfycbzZEierdUqsMhBco7jxx-_iRFWyxa9C5Mk_i8FR3e1KKkPr6cm8_aJfPPOHCdXYDAMt4Q/exec";
+
 function post() {
   const name = document.getElementById("name").value;
   const message = document.getElementById("message").value;
@@ -22,14 +23,15 @@ function post() {
 
   fetch(API_URL, {
     method: "POST",
-    body: JSON.stringify({ name, message }),
-    headers: {
-      "Content-Type": "application/json"
-    }
+    body: JSON.stringify({ name, message }) // ← headers消す
   })
   .then(() => {
     document.getElementById("message").value = "";
     load();
+  })
+  .catch(err => {
+    alert("投稿失敗");
+    console.error(err);
   });
 }
 
@@ -41,7 +43,8 @@ function load() {
       board.innerHTML = "";
       data.reverse().forEach(item => {
         const div = document.createElement("div");
-        div.innerHTML = `<strong>${item.name}</strong><br>${item.message}<hr>`;
+        div.innerHTML =
+          `<strong>${item.name}</strong><br>${item.message}<hr>`;
         board.appendChild(div);
       });
     });
