@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <style>
+    @font-face {
+      font-family: "Gyosho";
+      src: url("gyosyo.ttf");
+    }
+
+    body {
+      font-family: "Gyosho", serif;
+      background-color: rgb(212, 212, 212);
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 20px auto;
+      background-color: #f3f1dc;
+      padding: 32px;
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    textarea {
+      width: 100%;
+      height: 80px;
+    }
+
+    input {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ログイン画面 -->
+<div id="login">
+  <p>パスワードを入力してください</p>
+  <input type="password" id="password">
+  <button onclick="checkPassword()">入室</button>
+</div>
+
+<!-- 本体（最初は非表示） -->
+<div id="content" style="display:none;">
+
+  <div class="container">
+    <h1>将棋同好会</h1>
+    <p>
+      活動場所：和室<br>
+      活動日時：毎週木曜日・第二第四水曜日
+    </p>
+    <p>
+      将棋部は、将棋を通じて論理的思考力や集中力を養い、
+      礼儀やマナーを大切にしながら活動しています。
+    </p>
+  </div>
+
+  <div class="container">
+    <h1>将棋部 交流掲示板</h1>
+
+    <input id="name" placeholder="名前"><br><br>
+    <textarea id="message" placeholder="メッセージ"></textarea><br><br>
+    <button onclick="post()">投稿</button>
+
+    <hr>
+    <div id="board"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
