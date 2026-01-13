@@ -12,7 +12,7 @@ function checkPassword() {
 }
 
 // ★ 自分のGASのURL（/exec で終わるやつ）
-const API_URL = "https://script.google.com/macros/s/AKfycbzZEierdUqsMhBco7jxx-_iRFWyxa9C5Mk_i8FR3e1KKkPr6cm8_aJfPPOHCdXYDAMt4Q/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbxLZcPfp9sOxddhCUsAUWH9kDbcrQxdvyjRJCbuaLvVgIwps1yJKTVfNrVedKgqmDaUgA/exec"
 
 // 投稿する
 function post() {
